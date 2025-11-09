@@ -1,0 +1,6 @@
+- @antfu/eslint-config
+- @vitest
+- unocss
+- pinia
+- vue-router
+- @unocss/reset
