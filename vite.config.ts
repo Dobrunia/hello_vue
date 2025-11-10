@@ -14,8 +14,10 @@ export default defineConfig({
     vueDevTools(),
     UnoCSS({
       shortcuts: {
-        'nav-link': 'h-[40px] px-4 flex items-center rounded-md hover:opacity-70',
-        'base-border': 'rounded-md border-2 border-gray-500',
+        'card-bd': 'bg-gray/20',
+        'nav-link': 'h-[40px] px-4 flex items-center rounded-md base-hover',
+        'base-border': 'rounded-md border-2 border-gray/50',
+        'base-hover': 'hover:opacity-50',
       },
       presets: [
         presetWind3(),

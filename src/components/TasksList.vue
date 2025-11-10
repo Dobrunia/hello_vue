@@ -12,9 +12,7 @@ const store = useTasksStore()
 
 <template>
   <div
-    flex="~ row wrap"
-    gap="2"
-    class="w-full p-8"
+    flex="~ row wrap gap-2"
   >
     <Task
       v-for="task in tasks"

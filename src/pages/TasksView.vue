@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import PageTitle from '@/components/PageTitle.vue'
+import Search from '@/components/Search.vue'
 import TasksList from '@/components/TasksList.vue'
 import { useTasksStore } from '@/stores/tasks'
 
@@ -15,6 +16,7 @@ onMounted(async () => {
 
 <template>
   <PageTitle title="Task List" />
+  <Search />
   <TasksList :tasks="store.tasks" />
 </template>
 

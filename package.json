@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
+    "@iconify-json/line-md": "^1.2.11",
+    "@iconify-json/tabler": "^1.2.23",
     "@tsconfig/node22": "^22.0.2",
     "@types/jsdom": "^27.0.0",
     "@types/node": "^22.18.11",

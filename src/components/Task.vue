@@ -14,16 +14,22 @@ const emit = defineEmits<{
   <label
     flex="~ items-center justify-between"
     base-border
-    class="p-4 w-[200px] cursor-pointer hover:opacity-70 select-none"
+    card-bd
+    base-hover
+    class="p-4 w-[200px] cursor-pointer select-none"
+    :class="{ 'opacity-30': task.done }"
   >
     <span :class="{ 'line-through': task.done }">
       {{ task.title }}
     </span>
     <input
       :checked="task.done"
+      class="sr-only"
       type="checkbox"
       @change="emit('toggle', task.id)"
     >
+    <div v-if="task.done" i-tabler:square-rounded-check-filled />
+    <div v-else i-tabler:square-rounded-check opacity-50 />
   </label>
 </template>
 

@@ -8,7 +8,9 @@ useDark()
 <template>
   <div class="h-[calc(100vh-60px)]">
     <Header />
-    <router-view />
+    <div flex="~ col gap-4 justify-center items-center" p-8>
+      <router-view />
+    </div>
   </div>
 </template>
 
