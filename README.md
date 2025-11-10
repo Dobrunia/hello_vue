@@ -1,21 +1,19 @@
+### Что успел попробовать:
+
 - @antfu/eslint-config
 - @vitest
 - unocss
 - pinia
+- PiniaPluginContext
 - vue-router
 - @unocss/reset
 - @iconify
+- fuse.js
 
+### Что стоит попробовать во vue:
+- Создание плагина, анимации
+- Transition и TransitionGroup,
 
-
-
-Кейсы для изучения Vue композаблов
-1. Поиск и фильтрация задач
-ref — поисковый запрос и фильтр (all/done/undone)
-computed — отфильтрованный список задач
-2. Статистика на главной странице
-computed — статистика (всего, выполнено, осталось, прогресс)
-watch — логирование изменений статистики
 3. Форма добавления задачи
 reactive — форма (title, done)
 computed — валидность формы

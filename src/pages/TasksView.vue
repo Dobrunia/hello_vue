@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Fuse from 'fuse.js'
 import { computed, onMounted, ref } from 'vue'
 import PageTitle from '@/components/PageTitle.vue'
 import Search from '@/components/Search.vue'
@@ -11,9 +12,12 @@ const searchQuery = ref('')
 const filteredTasks = computed(() => {
   if (!searchQuery.value)
     return store.tasks
-  return store.tasks.filter(task =>
-    task.title.toLowerCase().includes(searchQuery.value.toLowerCase()),
-  )
+
+  const fuse = new Fuse(store.tasks, {
+    keys: ['title'],
+  })
+
+  return fuse.search(searchQuery.value).map(result => result.item)
 })
 
 onMounted(async () => {
