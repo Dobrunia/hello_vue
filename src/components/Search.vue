@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const searchQuery = defineModel<string>({ default: '' })
 </script>
 
 <template>
@@ -8,6 +9,7 @@
     class="w-[254px] pr-2 group focus-within:border-white"
   >
     <input
+      v-model="searchQuery"
       type="text"
       placeholder="Search..."
       class="pl-2 py-1 border-0 focus:outline-none"
