@@ -14,7 +14,7 @@ const emit = defineEmits<{
   <label
     flex="~ items-center justify-between"
     base-border
-    class="p-4 w-[200px] cursor-pointer hover:opacity-70"
+    class="p-4 w-[200px] cursor-pointer hover:opacity-70 select-none"
   >
     <span :class="{ 'line-through': task.done }">
       {{ task.title }}
