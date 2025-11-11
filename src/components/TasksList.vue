@@ -11,8 +11,12 @@ const store = useTasksStore()
 </script>
 
 <template>
-  <div
-    flex="~ row wrap gap-2"
+  <TransitionGroup
+    name="task-list"
+    tag="div"
+    class="w-full p-8"
+    flex="~ row wrap"
+    gap="2"
   >
     <Task
       v-for="task in tasks"
@@ -20,9 +24,18 @@ const store = useTasksStore()
       :task="task"
       @toggle="store.toggleTask(task.id)"
     />
-  </div>
+  </TransitionGroup>
 </template>
 
-<style>
+<style scoped>
+/* Анимация появления/исчезновения */
+.task-list-enter-active,
+.task-list-leave-active {
+  transition: all 0.3s ease;
+}
 
+.task-list-enter-from {
+  opacity: 0;
+  transform: scale(0.8) translateY(-10px);
+}
 </style>
