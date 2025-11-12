@@ -17,7 +17,7 @@ export default defineConfig({
         'card-bd': 'bg-gray/20',
         'nav-link': 'h-[40px] px-4 flex items-center rounded-md base-hover',
         'base-border': 'rounded-md border-2 border-gray/50',
-        'base-hover': 'hover:opacity-50',
+        'base-hover': 'hover:opacity-50 cursor-pointer',
       },
       presets: [
         presetWind3(),

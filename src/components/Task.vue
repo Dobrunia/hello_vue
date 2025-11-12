@@ -16,7 +16,7 @@ const emit = defineEmits<{
     base-border
     card-bd
     base-hover
-    class="p-4 w-[200px] cursor-pointer select-none"
+    class="p-4 w-[200px] select-none"
     :class="{ 'opacity-30': task.done }"
   >
     <span :class="{ 'line-through': task.done }">
