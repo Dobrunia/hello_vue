@@ -6,7 +6,7 @@ const prompt = defineModel<string>({ default: '' });
   <div flex="~ items-center justify-center" class="w-full h-63px">
     <div
       flex="~ items-center justify-between"
-      class="h-full w-864px bg-[#303030] rounded-28px font-size-24px line-height-[1.5] pr-10px pl-20px shadow-short"
+      class="h-full w-864px bg-[#303030] border-1 border-[#3a3a3a] rounded-28px font-size-24px line-height-[1.5] pr-10px pl-20px shadow-short"
     >
       <div i-line-md:plus />
       <input
