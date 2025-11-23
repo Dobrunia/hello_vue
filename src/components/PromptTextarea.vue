@@ -9,7 +9,10 @@ const prompt = defineModel<string>({ default: '' });
       class="h-full w-864px bg-[#303030] rounded-28px font-size-24px line-height-[1.5] pr-10px pl-20px shadow-short"
     >
       <div i-line-md:plus />
-      <input class="w-80% h-50% translate-y-[-2px] whitespace-pre-wrap outline-none" placeholder="Спросите что-нибудь…" />
+      <input
+        class="w-80% h-50% translate-y-[-2px] whitespace-pre-wrap outline-none user-select-none"
+        placeholder="Спросите что-нибудь…"
+      />
       <div i-tabler:microphone></div>
       <div class="bg-[#424242] rounded-full p-2">
         <svg
@@ -30,6 +33,10 @@ const prompt = defineModel<string>({ default: '' });
 </template>
 
 <style scoped>
+.user-select-none {
+  user-select: none;
+}
+
 .shadow-short {
   box-shadow:
     0px 4px 12px 0px rgba(0, 0, 0, 0.1),
