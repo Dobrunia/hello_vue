@@ -10,6 +10,9 @@
       <router-link to="/tasks" class="nav-link">
         Tasks
       </router-link>
+      <router-link to="/gpt" class="nav-link">
+        GPT
+      </router-link>
     </nav>
   </header>
 </template>
