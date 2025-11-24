@@ -10,9 +10,9 @@ const newChat = ref(true);
 <template>
   <PageTitle title="Тестовое в CodeX" />
   <div flex="~ col justify-between items-center" class="h-[calc(100vh-236px)] w-full">
-    <div v-if="newChat"></div>
+    <div v-if="!newChat"></div>
     <div>
-      <div v-if="!newChat"
+      <div v-if="newChat"
         class="mb-32px px-1 text-pretty"
         flex="~ items-center justify-center"
       >

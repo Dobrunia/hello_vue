@@ -8,14 +8,18 @@ const prompt = defineModel<string>({ default: '' });
       flex="~ items-center justify-between"
       class="h-full w-864px bg-[#303030] border-1 border-[#3a3a3a] rounded-28px font-size-24px line-height-[1.5] pr-10px pl-16px shadow-short"
     >
-      <div i-line-md:plus />
+      <div class="p-2 bg-hover hover:bg-[#424242]">
+        <div i-line-md:plus />
+      </div>
       <input
         class="w-80% h-50% translate-y-[-2px] whitespace-pre-wrap outline-none user-select-none"
         placeholder="Спросите что-нибудь…"
       />
       <div v-if="prompt.length < 1" flex="~ items-center justify-center gap-0.5rem">
-        <div i-tabler:microphone></div>
-        <div class="bg-[#424242] rounded-full p-2">
+        <div class="p-2 bg-hover hover:bg-[#424242]">
+          <div i-tabler:microphone />
+        </div>
+        <div class="p-2 bg-hover bg-[#424242] hover:opacity-50">
           <svg
             width="24"
             height="24"
@@ -49,6 +53,11 @@ const prompt = defineModel<string>({ default: '' });
 </template>
 
 <style scoped>
+.bg-hover {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .user-select-none {
   user-select: none;
 }
