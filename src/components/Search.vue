@@ -6,7 +6,7 @@ const searchQuery = defineModel<string>({ default: '' })
   <div
     flex="~ items-center justify-center"
     base-border
-    class="w-[254px] pr-2 group focus-within:border-white"
+    class="pr-2 group focus-within:border-white"
   >
     <input
       v-model="searchQuery"
