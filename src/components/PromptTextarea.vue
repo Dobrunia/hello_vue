@@ -1,5 +1,15 @@
 <script setup lang="ts">
 const prompt = defineModel<string>({ default: '' });
+
+const emit = defineEmits<{
+  submit: [value: string];
+}>();
+
+const handleSubmit = () => {
+  if (prompt.value.trim()) {
+    emit('submit', prompt.value);
+  }
+};
 </script>
 
 <template>
@@ -12,8 +22,10 @@ const prompt = defineModel<string>({ default: '' });
         <div i-line-md:plus />
       </div>
       <input
-        class="w-80% h-50% translate-y-[-2px] whitespace-pre-wrap outline-none user-select-none"
+        v-model="prompt"
+        class="w-80% h-50% translate-y-[-2px] whitespace-pre-wrap outline-none user-select-none bg-transparent"
         placeholder="Спросите что-нибудь…"
+        @keydown.enter.prevent="handleSubmit"
       />
       <div v-if="prompt.length < 1" flex="~ items-center justify-center gap-0.5rem">
         <div class="p-2 bg-hover hover:bg-[#424242]">
@@ -34,7 +46,11 @@ const prompt = defineModel<string>({ default: '' });
           </svg>
         </div>
       </div>
-      <div v-if="prompt.length > 0">
+      <div
+        v-if="prompt.length > 0"
+        class="p-2 bg-hover hover:bg-[#424242] cursor-pointer"
+        @click="handleSubmit"
+      >
         <svg
           width="20"
           height="20"
